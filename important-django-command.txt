@@ -1,0 +1,5 @@
+django-admin startproject <filename> -> to start the project
+python manage.py runserver -> to run the project
+
+python manage.py startapp <filename> -> to create a new app
+after creating the new app, don't forget to put the filename on setting.py under home_helper under INSTALLED_APPS
