@@ -1,4 +1,4 @@
-This project is called Home-Helper.
+HOME-HELPER
 
 Home-helper is a company that provides hourly domestic workers such as house helpers and nannies. Domestic helpers will be hired and further trained by the company in order to prepare them up to the expected standard.
 
