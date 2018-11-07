@@ -3,3 +3,5 @@ python manage.py runserver -> to run the project
 
 python manage.py startapp <filename> -> to create a new app
 after creating the new app, don't forget to put the filename on setting.py under home_helper under INSTALLED_APPS
+after putting the filename in the setting.py, go to the urls under home_helper and
+create a new import (from filename.views import function) and also put in the urlpatterns (path('filename/), function that has been imported)
