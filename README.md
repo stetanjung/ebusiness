@@ -1,6 +1,6 @@
-#HOME-HELPER
+## HOME-HELPER
 
-Home-helper is a company that provides hourly domestic workers such as house helpers and nannies. Domestic helpers will be hired and further trained by the company in order to prepare them up to the expected standard.
+**Home-helper** is a company that provides hourly domestic workers such as house helpers and nannies. Domestic helpers will be hired and further trained by the company in order to prepare them up to the expected standard.
 
 Our domestic workers are well-trained and could be held responsible to clean the customers’ venue according to our reliable standard. We uphold the value “your wish is our command” and so customers could make special request and additional orders to the workers. On top of that, our staffs has been specially trained to take care of children and hence with no doubt, our customers could rely their on the hands of the domestic workers.
 
