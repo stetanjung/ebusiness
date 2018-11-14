@@ -2,31 +2,44 @@
     include("connection.php");
 
     $user = "CREATE TABLE user (
-        userID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        username VARCHAR(30) NOT NULL,
-        firstname VARCHAR(30) NOT NULL,
-        lastname VARCHAR(30) NOT NULL,
-        email VARCHAR(90) NOT NULL,
+        userID int unsigned auto_increment primary key,
+        username varchar(30) not null,
+        firstname varchar(30) not null,
+        lastname varchar(30) not null,
+        email varchar(90) not null,
+        contactNumber varchar(20) not null,
+        question1 varchar(200) not null,
+        answer1 varchar(200) not null,
+        question2 varchar(200) not null,
+        answer2 varchar(200) not null,
+        age int unsigned not null,
+        gender varchar(1) not null,
+        country varchar(30) not null
+    )";
+
+    $comment = "CREATE TABLE comment (
 
     )";
 
-    $menu = "CREATE TABLE menu(
-        menuID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        foodname VARCHAR(30) NOT NULL,
-        category VARCHAR(30) NOT NULL,
-        price INT NOT NULL,
-        food_description VARCHAR(90) NOT NULL,
+    $employee = "CREATE TABLE empolyee (
 
     )";
 
-    $order = "CREATE TABLE order(
-        orderID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        menuID INT UNSIGNED,
+    $serviceType = "CREATE TABLE service_type (
+
+    )";
+
+    $shoppingCart = "CREATE TABLE shopping_cart (
+
+    )";
+
+    $payment = "CREATE TABLE payment (
+
     )";
 
     $createTable = array();
 
-    array_push($createTable, "hello world");
+    array_push($createTable, $user, $comment, $employee, $serviceType, $shoppingCart, $payment);
 
     for($i = 0; $i < count($createTable); $i++){
         if(mysqli_query($con, $createTable[$i]) === TRUE){
