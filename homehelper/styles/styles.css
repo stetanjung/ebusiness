@@ -4,7 +4,7 @@
 }
 .title{
 	position: relative;
-	top: 120px;
+	top: 90px;
 	text-align: center;
 }
 h1{
@@ -60,6 +60,10 @@ ul li {list-style: none;}
     border-radius: 10px;
 }
 input[type = "submit"]:hover{cursor: pointer;}
+
+#captcha {
+	margin: 10px 0 40px 165px;
+}
 
 .reg-box { padding-left: 30px; position: relative;}
 
