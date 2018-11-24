@@ -1,0 +1,157 @@
+a {
+  color: #616161;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  a:hover, a:active, a:focus {
+    color: #616161;
+    outline: none;
+    text-decoration: none; }
+	
+	  .process {
+  position: relative;
+  float: left;
+  width: 33.333%;
+  z-index: 0; }
+  .process:after {
+    position: absolute;
+    top: 35%;
+    right: -37%;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #f0f0f0;
+    z-index: -1; }
+  .process:last-child:after {
+    display: none; }
+  .process p {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: table;
+    border: 2px solid #fafafa;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: #fff;
+    z-index: 1;
+    font-weight: 400;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%; }
+    .process p span {
+      display: table-cell;
+      vertical-align: middle; }
+  .process h3 {
+    margin-bottom: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .process.active p {
+    border: 2px solid #f0f0f0; }
+    .process.active p span {
+      color: #EEC50F; }
+	  
+	  
+	  
+.product-cart, .product-name {
+  width: 100%;
+  display: block;
+  float: left;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 1em;
+  margin-bottom: 1em; }
+  .product-cart .one-forth, .product-name .one-forth {
+    width: calc(100% - 520px);
+    height: 100px !important;
+    display: table;
+    float: left; }
+    @media (max-width: 767.98px) {
+      .product-cart .one-forth, .product-name .one-forth {
+        width: calc(100% - 240px); } }
+  .product-cart .one-eight, .product-name .one-eight {
+    width: 130px;
+    height: 100px !important;
+    display: table;
+    float: left; }
+    @media (max-width: 767.98px) {
+      .product-cart .one-eight, .product-name .one-eight {
+        width: 60px; } }
+  .product-cart .display-tc, .product-name .display-tc {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100px;
+    width: 100%; }
+    .product-cart .display-tc h3, .product-name .display-tc h3 {
+      margin-bottom: 0;
+      padding-left: 30px;
+      font-size: 14px; }
+    .product-cart .display-tc .closed, .product-name .display-tc .closed {
+      display: block;
+      margin: 0 auto;
+      width: 20px;
+      height: 20px;
+      background: #f2f2f2;
+      position: relative; }
+      .product-cart .display-tc .closed:before, .product-cart .display-tc .closed:after, .product-name .display-tc .closed:before, .product-name .display-tc .closed:after {
+        position: absolute;
+        top: 10px;
+        bottom: 0;
+        left: 5px;
+        right: 0;
+        content: '';
+        width: 10px;
+        height: 1px;
+        background: #999999;
+        -webkit-transform: rotateZ(45deg);
+        -moz-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg);
+        -o-transform: rotateZ(45deg);
+        transform: rotateZ(45deg); }
+      .product-cart .display-tc .closed:after, .product-name .display-tc .closed:after {
+        -webkit-transform: rotateZ(-45deg);
+        -moz-transform: rotateZ(-45deg);
+        -ms-transform: rotateZ(-45deg);
+        -o-transform: rotateZ(-45deg);
+        transform: rotateZ(-45deg); }
+  .product-cart .product-img, .product-name .product-img {
+    display: block;
+    width: 90px;
+    height: 100px;
+    float: left; }
+    @media (max-width: 767.98px) {
+      .product-cart .product-img, .product-name .product-img {
+        display: none; } }
+  .product-cart .form-control, .product-name .form-control {
+    padding: 0;
+    height: 40px;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #f0f0f0 !important; }
+
+.product-name {
+  padding: .8em 0;
+  background: #f0f0f0;
+  border: none;
+  width: 100%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px; }
+  .product-name .one-forth, .product-name .one-eight {
+    height: initial !important; }
+    .product-name .one-forth span, .product-name .one-eight span {
+      color: #000;
+      font-weight: 400;
+      text-transform: uppercase; }
+      @media (max-width: 767.98px) {
+        .product-name .one-forth span, .product-name .one-eight span {
+          font-size: 10px; } }
+		  
+		  
+.px-4 {
+  padding-right: 1.5rem !important; }
+
+  
