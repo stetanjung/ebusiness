@@ -138,46 +138,16 @@
 					
 					</div>
 				</div>
-				<div class="row row-pb-lg">
-					<div class="col-md-12">
-						<div class="total-wrap">
-							<div class="row">
-								<div class="col-sm-8">
-									<form action="#">
-										<div class="row form-group">
-											<div class="col-sm-9">
-												<input type="text" name="quantity" class="form-control input-number" placeholder="Your Coupon Number...">
-											</div>
-											<br>
-											<div class="col-sm-3">
-												<input type="submit" value="Apply Coupon" class="btn" style="margin-left:-10px;">
-											</div>
-										</div>
-									</form>
-								</div>
-								<div class="col-sm-4 text-center">
-									<div class="total">
-										<div class="sub">
-											<p><span>Subtotal:</span> <span>$200.00</span></p>
-											<p><span>Delivery:</span> <span>$0.00</span></p>
-											<p><span>Discount:</span> <span>$45.00</span></p>
-										</div>
-										<div class="grand-total">
-											<p><span><strong>Total:</strong></span> <span>$450.00</span></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
+					<div class="col-md-12 text-center">
+						<p><a href="checkout.php" class="btn btn-big" style="margin-top:-50px;">Next</a></p>
+					</div>
 			</div>
 		</div>
 		
 		
 		<?php
-		require('header.php')
+		require('footer.php')
 		?>
 		
 	</div>
@@ -185,7 +155,6 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
 	</div>
-
 
 	</body>
 </html>
