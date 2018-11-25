@@ -22,10 +22,9 @@
         }
         else{
             $array=mysqli_fetch_array($result,MYSQLI_ASSOC);
-            $_SESSION['users_id']=$array['users_id'];
-            
+            $_SESSION['users_id']=$array['users_id'];   
         }
     }
-    echo("<script>window.location.href=' /comp2121/assignment2/phoneFood'</script>");
     include('connectionclose.php');
+    echo("<script>window.location.href=' /comp2121/assignment2/phoneFood'</script>");
 ?>
