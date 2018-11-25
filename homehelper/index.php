@@ -60,13 +60,14 @@
 		}
 		.header_right_ul{
 			display: flex;
-			width: 70px;
+			
 		}
 		.header_left{
 			margin-left: 30px;
 		}
 		.header_right ul li{
 			margin-right: 30px;
+			width: 70px;
 		}
 		.inp{
 			margin-right: 30px;
