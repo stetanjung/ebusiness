@@ -51,7 +51,7 @@
 							</div>
 							<div class="process text-center">
 								<p><span>03</span></p>
-								<h3>Payment Process</h3>
+								<h3>Order Complete	</h3>
 							</div>
 						</div>
 					</div>

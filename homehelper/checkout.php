@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<title>Footwear - Free Bootstrap 4 Template by Colorlib</title>
+	<title>Checkout | HomeHelper</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -41,7 +41,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<p class="bread"><span><a href="index.html">Home</a></span> / <span>Checkout</span></p>
+						<p class="bread"><span><a href="index.html">My Account</a></span> / <span>Shopping Cart</span> / <span>Checkout</span></p>
 					</div>
 				</div>
 			</div>
@@ -101,8 +101,7 @@
 
 						   <div class="w-100"></div>
 
-						
-								<div class="cart-detail">
+								<form method="post" class="cart-detail" action="order-complete.php">
 									<h2>Payment Method</h2>
 									<div class="form-group">
 										<div class="col-md-12">
@@ -147,15 +146,14 @@
 											</div>
 										</div>
 									</div>
-					
-
-					</div>
+							
 					<div class="col-md-12 text-center">
 						<input type="submit" value="Submit" class="btn btn-big" style="margin-top:50px;">
 					</div>
+					</form>	
+					</div>
 				</div>
 			</div>
-		</div>
 
 		<?php
 		require('footer.php')
