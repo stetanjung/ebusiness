@@ -15,7 +15,7 @@
 	</div>
     <div id="divID">
     <div style="background-color:transparent;">
-        <form method="POST" action="signup_process.php">
+        <form method="POST" action="signup_authentication.php">
             <ul class="reg-box">
                 <li>
                     <label for="">Username</label>
@@ -46,8 +46,8 @@
                     <span class="error error5"></span>
                 </li>
 				<li>
-                    <label for="">Mailbox</label>
-                    <input type="text" name="mailbox" value="" style="color:#545454;"/>
+                    <label for="">Email</label>
+                    <input type="text" name="email" value="" style="color:#545454;"/>
                     <span class="error error6"></span>
                 </li>
 				<li>
