@@ -1,0 +1,100 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+ul li{
+    list-style: none;
+}
+.title{
+    position: relative;
+    top: 90px;
+    text-align: center;
+}
+h1{
+    color: #EEC50F;
+    font-size: 46px;
+}
+body{
+    background: white;
+}
+#divID{
+    position: relative;
+    top: 100px;
+    margin:50px auto;
+    width: 600px;
+    font-family: "times";
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select:none;
+    color:#D98C0B;
+    border: 1px solid #f0f0f0;
+    border-radius:10px;
+    box-shadow: -0px 0px 5px 1px #ababab;
+}
+form{
+    padding: 20px 0px;
+}
+.sub{
+    text-align: center;
+}
+input{
+    background-color: #fff;
+    outline: none; 
+}
+.sub input{
+    position: relative;
+    left: 20px;
+    display: inline-block;
+    width: 300px;
+    background-color: #012246;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-family: "courier";
+    outline: none;
+    border: none;
+    margin: auto;
+    border-radius: 10px;
+}
+input[type = "submit"]:hover{
+    cursor: pointer;
+}
+.reg-box{ 
+    position: relative;
+}
+.reg-box li{
+    line-height: 44px;
+    width: auto;
+    overflow: hidden; 
+}
+.reg-box li label{ 
+    width: 140px; 
+    height: 50px; 
+    float: left; 
+    line-height: 50px; 
+    text-align: right;
+    padding-right: 30px; 
+}
+.reg-box li input{ 
+    border-radius: 3px; 
+    padding: 6px 0; 
+    font-size: 16px; 
+    width: 296px; 
+    height: 39px; 
+    line-height: 28px; 
+    border: 1px solid #dddddd; 
+    text-indent: 0.5em;
+    float: left; 
+}
+.error{
+    clear:both;
+    display:block;
+     padding-left: 90px; 
+     padding-bottom:5px;
+     height:20px;
+     float: left; 
+     font-size:12px;
+     line-height: 20px;
+}

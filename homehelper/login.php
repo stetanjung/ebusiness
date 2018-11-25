@@ -16,7 +16,7 @@
 	</div>
 	<div id="divID">
 		<div style="background-color:transparent;">
-		<form method="POST" action="login.php">
+		<form method="POST" action="login_authentication.php">
 			<ul class="reg-box">
 				<li>
 					<label for="">Username</label>
