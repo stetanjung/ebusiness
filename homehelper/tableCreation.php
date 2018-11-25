@@ -4,8 +4,7 @@
     $user = "CREATE TABLE user (
         userID int unsigned auto_increment primary key,
         username varchar(30) not null,
-        firstname varchar(30) not null,
-        lastname varchar(30) not null,
+        password varchar(32) not null,
         email varchar(90) not null,
         contactNumber varchar(20) not null,
         question1 varchar(200) not null,
@@ -14,7 +13,7 @@
         answer2 varchar(200) not null,
         age int unsigned not null,
         gender varchar(1) not null,
-        country varchar(30) not null
+        country varchar(30) not null,
     )";
 
     $comment = "CREATE TABLE comment (
@@ -34,11 +33,11 @@
 
     $serviceType = "CREATE TABLE service_type (
         serviceID int unsigned auto_increment primary key,
-        employeeID varchar(30) not null,
+        employeeID int unsigned not null,
         typeName varchar(30) not null,
         price int unsigned not null,
         availableTime int unsigned not null,
-        description int unsigned not null,
+        description varchar(200) not null,
     )";
 
     $shoppingCart = "CREATE TABLE shopping_cart (
