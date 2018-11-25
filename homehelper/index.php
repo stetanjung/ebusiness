@@ -60,7 +60,7 @@
 		}
 		.header_right_ul{
 			display: flex;
-			
+			width: 70px;
 		}
 		.header_left{
 			margin-left: 30px;
@@ -146,7 +146,7 @@
 						<li><a href="#">Baby-sitter</a></li>
 					</ul>
 				</li>
-				<li><a href="mailto:17083801d@connect.polyu.hk">MAIL US</a></li>
+				<li style="margin-left: 30px;"><a href="mailto:17083801d@connect.polyu.hk">MAIL US</a></li>
 			</ul>
 		</div>
 		<div class="inp">
