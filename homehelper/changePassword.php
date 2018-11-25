@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <!--
 Author: Code Apes.
@@ -24,16 +27,21 @@ require('header.php');
 		?>
 		<div class="content" style="text-align:center;">
 		<h1>Personal Information</h1><hr>
-			<li>
-				<label for="">Old Password</label>
-				<input type="password" name="oldPassword" value="" style="color:#999;" minlength="8" maxlength="16"/>
-				<span class="error error2"></span>
-			</li>
-			<li>
-				<label for="">New Password</label>
-				<input type="password" name="newPassword" value="" style="color:#999;" minlength="8" maxlength="16"/>
-				<span class="error error2"></span>
-			</li>
+			<form action="changePassword_authentication.php" method="post">
+				<li>
+					<label for="">Old Password</label>
+					<input type="password" name="oldPassword" value="" style="color:#999;" minlength="8" maxlength="16"/>
+					<span class="error error2"></span>
+				</li>
+				<li>
+					<label for="">New Password</label>
+					<input type="password" name="newPassword" value="" style="color:#999;" minlength="8" maxlength="16"/>
+					<span class="error error2"></span>
+				</li>
+				<div class="sub">
+					<input type="submit" value="Submit"/>
+				</div>
+			</form>
 		<br>
 		</div>
 	</main>
