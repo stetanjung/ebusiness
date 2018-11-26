@@ -13,7 +13,7 @@
 		a:hover{
 			color: #fabf14;
 		}
-		h2{
+		c{
 			font-size: 40px;
 			font-family:Monospace;
 			text-decoration:overline underline;
@@ -124,7 +124,7 @@
 	<div class="header_body">
 		<div class="header_left" style="display: flex;">
 			
-			<b>H</b><h2>ome-helper</h2>
+			<b>H</b><c>ome-helper</c>
 		</div>
 		<div class="header_right">
 			<ul class="header_right_ul">
