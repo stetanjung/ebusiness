@@ -113,7 +113,7 @@
 		
 	</style>
 	
-	<div class="header" style="background: #D9D9D9">
+	<div class="header">
 	<div class="topbar">
 		<ul class="aul">
 			<li class="signup"><a href="signup.php">Sign Up</a></li>
