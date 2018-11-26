@@ -66,28 +66,28 @@ a{
 	<div class="content">
 		<ul class="ful">
 			<li>
-				<a href="#">
+				<a href="detail.php">
 					<img src="img/1.jpg" alt="">
 					<p>name<br>Maid</p>
 					<span>$139.00/hour</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="detail.php">
 					<img src="img/2.jpg" alt="">
 					<p>name<br>Baby-sitter</p>
 					<span>$139.00/hour</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="detail.php">
 					<img src="img/3.jpg" alt="">
 					<p>name<br>Maid</p>
 					<span>$139.00</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="detail.php">
 					<img src="img/4.jpg" alt="">
 					<p>name<br>Maid</p>
 					<span>$139.00/hour</span>
@@ -96,28 +96,28 @@ a{
 		</ul>
 		<ul class="ful">
 			<li>
-				<a href="#">
+				<a href="detail.php">
 					<img src="img/1.jpg" alt="">
 					<p>name<br>Maid</p>
 					<span>$139.00/hour</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="detail.php">
 					<img src="img/2.jpg" alt="">
 					<p>name<br>Maid</p>
 					<span>$139.00/hour</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="detail.php">
 					<img src="img/3.jpg" alt="">
 					<p>name<br>Maid</p>
 					<span>$139.00/hour</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="detail.php">
 					<img src="img/4.jpg" alt="">
 					<p>name<br>Maid</p>
 					<span>$139.00/hour</span>
