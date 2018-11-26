@@ -22,7 +22,7 @@
 
 	<div id="page">
 		<?php
-		require('header.php')
+		require('nav.php')
 		?>
 
 		<div class="breadcrumbs">

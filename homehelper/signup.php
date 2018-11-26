@@ -10,6 +10,9 @@
 
 </head>
 <body>
+	<?php
+		require('nav.php');
+	?>
 	<div class="title">
 		<h1>Sign Up</h1>
 	</div>

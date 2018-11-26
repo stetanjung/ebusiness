@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Product Details</title>
+	<title>Product Details | HomeHelper</title>
 <style>
 *{
 	margin:0px;
@@ -69,7 +69,7 @@ header{
 </head>
 <body>
 	<?php
-	require('header.php')
+	require('nav.php')
 	?>
 <header>
 	<span class="span1"><a href="#">HOME</a></span>

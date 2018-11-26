@@ -60,7 +60,7 @@ a{
 </style>
 <body>
 	<?php
-	require('header.php')
+	require('nav.php')
 	?>
 	<h1 class="title">BEST&nbsp;&nbsp;&nbsp;SELLERS</h1>
 	<div class="content">

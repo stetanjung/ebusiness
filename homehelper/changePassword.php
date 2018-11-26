@@ -7,7 +7,7 @@ Author: Code Apes.
 -->
 <html>
 <head>
-	<title>Account Information</title>
+	<title>Account Information | HomeHelper</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link type="text/css" rel="stylesheet" href="styles/styles.css">
@@ -17,7 +17,7 @@ Author: Code Apes.
 </head>
 <body>
 <?php
-require('header.php');
+require('nav.php');
 ?>
 <div class="container">
 	<!-- main body -->

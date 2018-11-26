@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login Page</title>
+    <title>Login | HomeHelper</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<!-- reCAPTCHA -->
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
+	<?php
+		require('nav.php');
+	?>
 	<div class="title">
 		<h1>Log In</h1>
 	</div>

@@ -341,7 +341,7 @@ Author: Code Apes.
 </head>
 <body>
 <?php
-	require('header.php');
+	require('nav.php');
 ?>
 <div class="container">
 	<!-- main body -->
