@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	include("connection.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +64,10 @@ a{
 </style>
 <body>
 	<?php
-		require('nav.php')
+		require('nav.php');
+		$employeeQuery = "select * from employee";
+		$result = mysqli_query($con, $employeeQuery);
+		$array = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	?>
 	<h1 class="title">BEST&nbsp;&nbsp;&nbsp;SELLERS</h1>
 	<div class="content">
