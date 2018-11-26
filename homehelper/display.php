@@ -67,60 +67,60 @@ a{
 		<ul class="ful">
 			<li>
 				<a href="detail.php">
-					<img src="img/1.jpg" alt="">
-					<p>name<br>Maid</p>
-					<span>$139.00/hour</span>
+					<img src="img/m1.jpg" alt="">
+					<p>Lily<br>Maid</p>
+					<span>$60.00/hour</span>
 				</a>
 			</li>
 			<li>
 				<a href="detail.php">
-					<img src="img/2.jpg" alt="">
-					<p>name<br>Baby-sitter</p>
-					<span>$139.00/hour</span>
+					<img src="img/b2.jpg" alt="">
+					<p>Ada<br>Baby-sitter</p>
+					<span>$60.00/hour</span>
 				</a>
 			</li>
 			<li>
 				<a href="detail.php">
-					<img src="img/3.jpg" alt="">
-					<p>name<br>Maid</p>
-					<span>$139.00</span>
+					<img src="img/m2.jpg" alt="">
+					<p>Belinda<br>Maid</p>
+					<span>$60.00</span>
 				</a>
 			</li>
 			<li>
 				<a href="detail.php">
-					<img src="img/4.jpg" alt="">
-					<p>name<br>Maid</p>
-					<span>$139.00/hour</span>
+					<img src="img/m3.jpg" alt="">
+					<p>Coral<br>Maid</p>
+					<span>$60.00/hour</span>
 				</a>
 			</li>
 		</ul>
 		<ul class="ful">
 			<li>
 				<a href="detail.php">
-					<img src="img/1.jpg" alt="">
-					<p>name<br>Maid</p>
-					<span>$139.00/hour</span>
+					<img src="img/b3.jpg" alt="">
+					<p>Dana<br>Baby-sitter</p>
+					<span>$60.00/hour</span>
 				</a>
 			</li>
 			<li>
 				<a href="detail.php">
-					<img src="img/2.jpg" alt="">
-					<p>name<br>Maid</p>
-					<span>$139.00/hour</span>
+					<img src="img/b4.jpg" alt="">
+					<p>Jolie<br>Baby-sitter</p>
+					<span>$60.00/hour</span>
 				</a>
 			</li>
 			<li>
 				<a href="detail.php">
-					<img src="img/3.jpg" alt="">
-					<p>name<br>Maid</p>
-					<span>$139.00/hour</span>
+					<img src="img/m4.jpg" alt="">
+					<p>Nancy<br>Maid</p>
+					<span>$60.00/hour</span>
 				</a>
 			</li>
 			<li>
 				<a href="detail.php">
-					<img src="img/4.jpg" alt="">
-					<p>name<br>Maid</p>
-					<span>$139.00/hour</span>
+					<img src="img/b5.jpg" alt="">
+					<p>Rita<br>Baby-sitter</p>
+					<span>$60.00/hour</span>
 				</a>
 			</li>
 		</ul>
