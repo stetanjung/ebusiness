@@ -77,12 +77,12 @@ header{
 </header>
 <div class="content">
 	<div class="mian_left">
-		<img src="img/1.jpg" alt="">
+		<img src="img/b3.jpg" alt="">
 	</div>
 	<div class="mian_right">
-		<h3>name</h3>
-		<span>$68.00/hour</span>
-		<p>detail...</p>
+		<h3>Dana</h3>
+		<span>$60.00/hour</span>
+		<p>She is responsible for her work and very patient with her children. She speaks Cantonese and English. She is your best choice.</p>
 		<button class="add">Add to cart</button>
 	</div>
 </div>
