@@ -88,7 +88,7 @@ a{
 			</li>
 			<li>
 				<a href="detail.php">
-					<img src="img/m3.jpg" alt="">
+					<img src="img/m3.png" alt="">
 					<p>Coral<br>Maid</p>
 					<span>$60.00/hour</span>
 				</a>
@@ -111,7 +111,7 @@ a{
 			</li>
 			<li>
 				<a href="detail.php">
-					<img src="img/m4.jpg" alt="">
+					<img src="img/m4.png" alt="">
 					<p>Nancy<br>Maid</p>
 					<span>$60.00/hour</span>
 				</a>
