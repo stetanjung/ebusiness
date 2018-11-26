@@ -1,3 +1,8 @@
+<?php
+	session_start();
+	$users_id = $_SESSION['users_id'];
+	include('connection.php');
+?>
 <!DOCTYPE html>
 <!--
 Author: Code Apes.
@@ -20,7 +25,7 @@ Author: Code Apes.
 	}
 	function RevertPhone(){
 		document.getElementById("phoneEdit").innerHTML= 
-		'<div class="button btn btn-small" onclick="EditUname()">Edit</div>';
+		'<div class="button btn btn-small" onclick="EditPhone()">Edit</div>';
 		document.getElementById("phone").innerHTML = document.getElementById("phoneInput").value;
 		// And send it to database, or else throw error;
 	}
@@ -336,40 +341,43 @@ Author: Code Apes.
 </head>
 <body>
 <?php
-require('header.php');
+	require('header.php');
 ?>
 <div class="container">
 	<!-- main body -->
 	<main>
 		<?php
-		require('account_sidebar.php');
+			require('account_sidebar.php');
+			$userQuery = "select * from user where userID=$users_id"; 
+			$result = mysqli_connect($con, $userQuery);
+			$array = mysqli_fetch_array($result, MYSQQLI_ASSOC);
 		?>
 		<div class="content" style="text-align:center;">
 		<h1>Personal Information</h1><hr>
 		<table>
 		<tr>
 		  <td><h3>Username:</h3></td>
-		  <td><h3 id="uname">#Username</h3></td><!-- Username cannot be changed-->
+		  <td><?php echo('<h3 id="uname">$array["username"]</h3>');?></td><!-- Username cannot be changed-->
 		  <td></td>
 		</tr>
 		<tr>
 		  <td><h3>Contact number:</h3></td>
-		  <td><h3 id="phone">#Contact number</h3></td>
+		  <td><?php echo('<h3 id="phone">$array["contactNumber"]</h3>');?></td>
 		  <td id="phoneEdit"><div class="btn-inverse" onclick="EditPhone()">Edit</div></td>
 		</tr>
 		<tr>
 		  <td><h3>Age:</h3></td>
-		  <td><h3 id="age">#Age</h3></td>
+		  <td><?php echo('<h3 id="age">$array["age"]</h3>');?></td>
 		  <td id="ageEdit"><div class="btn-inverse" onclick="EditAge()">Edit</div></td>
 		</tr>
 		<tr>
 		  <td><h3>Email:</h3></td>
-		  <td><h3 id="email">#Email </h3></td>
+		  <td><?php echo('<h3 id="email">$array["email"]</h3>');?></td>
 		  <td id="emailEdit"><div class="btn-inverse" onclick="EditEmail()">Edit</div></td>
 		</tr>		
 		<tr>
 		  <td><h3>Nationality:</h3></td>
-		  <td><h3 id="country">#Email </h3></td>
+		  <td><?php echo('<h3 id="country">$array["country"]</h3>');?></td>
 		  <td id="countryEdit"><div class="btn-inverse" onclick="EditCountry()">Edit</div></td>
 		</tr>
 		</table><br>
