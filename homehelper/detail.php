@@ -77,7 +77,7 @@ header{
 </header>
 <div class="content">
 	<div class="mian_left">
-		<img src="img/gundam.bmp" alt="">
+		<img src="img/1.jpg" alt="">
 	</div>
 	<div class="mian_right">
 		<h3>name</h3>
