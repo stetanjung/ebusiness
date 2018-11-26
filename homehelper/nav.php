@@ -133,8 +133,8 @@
 				<li class="block">
 					<a href="display.php">SERVICE ITEMS</a>
 					<ul class="none">
-						<li><a href="#">Maid</a></li>
-						<li><a href="#">Baby-sitter</a></li>
+						<li><a href="maid.php">Maid</a></li>
+						<li><a href="babysitter.php">Baby-sitter</a></li>
 					</ul>
 				</li>
 				<li style="margin-left: 30px;"><a href="mailto:17083801d@connect.polyu.hk">MAIL US</a></li>
