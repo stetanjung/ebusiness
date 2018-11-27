@@ -189,4 +189,15 @@ a {
         .cart-detail ul li span:last-child {
           width: 100px; }
 		  
-		  
+.btn, .btn-inverse{
+	display:inline-block; 
+	padding:3px 20px; 
+	border:2px solid;
+	text-decoration:none;
+	font-weight:bold;
+    cursor: pointer;
+	border-radius: 8px;
+}
+
+.btn, .btn-inverse:hover{color:#FFFFFF; background-color:#EEC50F; border-color:#FFFFFF;}
+.btn:hover, .btn-inverse{color:#EEC50F; background-color:transparent; border-color:#EEC50F;}

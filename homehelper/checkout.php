@@ -13,7 +13,6 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="styles/styles.css">
-	<link rel="stylesheet" href="styles/account.css">
 	<link rel="stylesheet" href="styles/shoppingCart.css">
 
 	<style>
@@ -26,6 +25,20 @@
 		font-size: 18px;
 		float:right;
 	}
+
+	.btn, .btn-inverse{
+	display:inline-block; 
+	padding:3px 20px; 
+	border:2px solid;
+	text-decoration:none;
+	font-weight:bold;
+    cursor: pointer;
+	border-radius: 8px;
+}
+
+.btn, .btn-inverse:hover{color:#FFFFFF; background-color:#EEC50F; border-color:#FFFFFF;}
+.btn:hover, .btn-inverse{color:#EEC50F; background-color:transparent; border-color:#EEC50F;}
+
 	</style>
 	</head>
 	<body>
@@ -86,16 +99,37 @@
 									<h2>Cart Total</h2>
 									<ul>
 										<li>
-											<span>Subtotal</span> <span>$100.00</span>
+											<span>Subtotal</span> <span>$120.00</span>
 											<ul>
-												<li><span class="toright">1 x Product Name</span> <span class="toleft">$99.00</span></li>
-												<li><span class="toright">1 x Product Name</span> <span class="toleft">$78.00</span></li>
+												<li><span class="toright">Dana Baby-sitter * 2 hrs</span> <span class="toleft">$60.00 * 2</span></li>
 											</ul>
 										</li>
-										<li><span>Shipping</span> <span>$0.00</span></li>
-										<li><span>Discount:</span> <span>$45.00</span></li>
-										<li><span>Order Total</span> <span>$180.00</span></li>
+										<li><span>Discount:</span> <span>$0.00</span></li>
+										<li><span>Order Total</span> <span>$120.00</span></li>
 									</ul>
+								</div>
+								
+								<div class="cart-detail">
+									<h2>Your Information</h2>
+									<form>
+								   <div class="col-md-12">
+										<div class="form-group">
+												<label for="cardNo">Address:</label>
+											<input type="text" id="cardNo" class="form-control" placeholder="Your Address..">
+									  </div>
+								   </div>
+								   								   <div class="col-md-12">
+									<div class="form-group">
+												<label for="cardNo">Address:</label>
+											<input type="text" id="cardNo" class="form-control" placeholder="e.g. 2018-11-27 15:00">
+									  </div>
+								   </div>
+								   <div class="col-md-12">
+										<div class="form-group">
+												<label for="cardHolder">Further Requirement:</label>
+											<input type="text" id="cardHolder" class="form-control" placeholder="Remarks..">
+									  </div>
+								   </div></form>
 								</div>
 						
 
@@ -118,7 +152,7 @@
 									  </div>
 								   </div>
 								   
-								   	  <div class="col-md-12">
+								   <div class="col-md-12">
 										<div class="form-group">
 												<label for="cardHolder">Card Holder Name:</label>
 											<input type="text" id="cardHolder" class="form-control" placeholder="">

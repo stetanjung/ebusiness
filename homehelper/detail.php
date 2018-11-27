@@ -72,7 +72,7 @@ header{
 	require('nav.php')
 	?>
 <header>
-	<span class="span1"><a href="#">HOME</a></span>
+	<span class="span1"><a href="index.php">HOME</a></span>
 	<span class="span2">&nbsp;/&nbsp;&nbsp;PRODUCT DETAILS</span>
 </header>
 <div class="content">
@@ -83,7 +83,7 @@ header{
 		<h3>Dana</h3>
 		<span>$60.00/hour</span>
 		<p>She is responsible for her work and very patient with her children. She speaks Cantonese and English. She is your best choice.</p>
-		<button class="add">Add to cart</button>
+		<a href="shoppingCart.php"><button class="add">Add to cart</button></a>
 	</div>
 </div>
 </body>
