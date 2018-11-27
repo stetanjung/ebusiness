@@ -12,9 +12,22 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="styles/styles.css">
-	<link rel="stylesheet" href="styles/account.css">
 	<link rel="stylesheet" href="styles/shoppingCart.css">
 
+	<style>
+	.btn, .btn-inverse{
+	display:inline-block; 
+	padding:3px 20px; 
+	border:2px solid;
+	text-decoration:none;
+	font-weight:bold;
+    cursor: pointer;
+	border-radius: 8px;
+}
+
+.btn, .btn-inverse:hover{color:#FFFFFF; background-color:#EEC50F; border-color:#FFFFFF;}
+.btn:hover, .btn-inverse{color:#EEC50F; background-color:transparent; border-color:#EEC50F;}
+</style>
 	</head>
 	<body>
 		
@@ -80,12 +93,12 @@
 								<div class="product-img" style="background-image: url(images/item-6.jpg);">
 								</div>
 								<div class="display-tc">
-									<h3>Product Name</h3>
+									<h3>Dana Baby-sitter</h3>
 								</div>
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$68.00</span>
+									<span class="price">$60.00</span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
@@ -95,7 +108,7 @@
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$120.00</span>
+									<span class="price">$60.00</span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
@@ -104,37 +117,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="product-cart d-flex">
-							<div class="one-forth">
-								<div class="product-img" style="background-image: url(images/item-7.jpg);">
-								</div>
-								<div class="display-tc">
-									<h3>Product Name</h3>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<span class="price">$68.00</span>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<form action="#">
-										<input type="text" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
-									</form>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<span class="price">$120.00</span>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<a href="#" class="closed"></a>
-								</div>
-							</div>
-						</div>
+						
+				
 					
 					</div>
 				</div>
