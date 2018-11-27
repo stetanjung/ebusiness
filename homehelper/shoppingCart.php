@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -80,12 +83,12 @@
 								<div class="product-img" style="background-image: url(images/item-6.jpg);">
 								</div>
 								<div class="display-tc">
-									<h3>Product Name</h3>
+									<h3>Lily</h3>
 								</div>
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$68.00</span>
+									<span class="price">$60.00</span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
@@ -95,7 +98,7 @@
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$120.00</span>
+									<span class="price">$60.00</span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
@@ -109,12 +112,12 @@
 								<div class="product-img" style="background-image: url(images/item-7.jpg);">
 								</div>
 								<div class="display-tc">
-									<h3>Product Name</h3>
+									<h3>Belinda</h3>
 								</div>
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$68.00</span>
+									<span class="price">$60.00</span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
@@ -126,7 +129,7 @@
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$120.00</span>
+									<span class="price">$60.00</span>
 								</div>
 							</div>
 							<div class="one-eight text-center">

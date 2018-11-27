@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +80,7 @@ header{
 </header>
 <div class="content">
 	<div class="mian_left">
-		<img src="img/1.jpg" alt="">
+		<img src="img/m1.jpg" alt="">
 	</div>
 	<div class="mian_right">
 		<h3>name</h3>

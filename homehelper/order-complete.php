@@ -78,8 +78,8 @@
 						<h3>Thank you for purchasing!</h3> 
 
 						<p>
-							<a href="index.php"class="btn-inverse">My Order</a>
-							<a href="shop.html"class="btn-inverse"><i class="icon-shopping-cart"></i> Continue Shopping</a>
+							<a href="userInfo.php"class="btn-inverse">My Order</a>
+							<a href="index.php"class="btn-inverse"><i class="icon-shopping-cart"></i> Continue Shopping</a>
 						</p>
 					</div>
 				</div>

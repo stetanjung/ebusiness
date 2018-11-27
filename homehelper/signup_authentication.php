@@ -12,7 +12,7 @@
     }
 
     if($error){
-        echo("<script>alert('All fields are required.');window.location.href='/ebusiness/homehelper/signup.php';</script>");
+        echo("<script>alert('All fields are required.');window.location.href='/~16094653d/ebusiness/homehelper/signup.php';</script>");
     }
     else{
         $username = $_POST['username'];
@@ -27,16 +27,17 @@
         $question2 = $_POST['q2'];
         $answer2 = $_POST['a2'];
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo("<script>alert('Invalid email format.');window.location.href='/ebusiness/homehelper/signup.php';</script>");
+            echo("<script>alert('Invalid email format.');window.location.href='/~16094653d/ebusiness/homehelper/signup.php';</script>");
         }
         $existUserQuery = "select userID from user where username = '$username'";
         $existUser = mysqli_fetch_array(mysqli_query($con, $existUserQuery), MYSQLI_ASSOC);
 
         if($existUser == null){
-            $insertUser = "insert into user (username, fullname, email, password, phonenumber) values ('$username', '$fullname', '$email', '$password', '$phone')";
+            $insertUser = "insert into user (username, pass, email, contactNumber, question1, answer1, question2, answer2, age, gender, country) values ('$username', '$password', '$email', '$phone', '$question1', '$answer1', '$question2', '$answer2', '$age', '$gender', '$country')";
             mysqli_query($con, $insertUser);
+            echo(mysqli_error($con));
         }
         include('connectionclose.php');
-        echo("<script>alert('User is successfully created.');window.location.href=' /ebusiness/homehelper/'</script>");
+        echo("<script>alert('User is successfully created.');window.location.href=' /~16094653d/ebusiness/homehelper/'</script>");
     }
 ?>

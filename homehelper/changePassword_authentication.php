@@ -18,7 +18,7 @@
     else{
         $oldPassword = md5(_POST['oldPassword']);
         $newPassword = md5($_POST['newPassword']);
-        $updatePasswordQuery = "UPDATE user SET password='$newPassword' where userID='$users_id' and password='$oldPassword'";
+        $updatePasswordQuery = "UPDATE user SET pass='$newPassword' where userID='$users_id' and pass='$oldPassword'";
         $updatePassword=mysqli_query($con, $updatePasswordQuery);
         if($updatePassword === TRUE){
             echo("<script>alert('Password has been updated.');window.location.href='/ebusiness/homehelper/changePassword.php';</script>");

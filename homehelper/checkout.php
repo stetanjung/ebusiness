@@ -86,15 +86,15 @@
 									<h2>Cart Total</h2>
 									<ul>
 										<li>
-											<span>Subtotal</span> <span>$100.00</span>
+											<span>Subtotal</span> <span>$120.00</span>
 											<ul>
-												<li><span class="toright">1 x Product Name</span> <span class="toleft">$99.00</span></li>
-												<li><span class="toright">1 x Product Name</span> <span class="toleft">$78.00</span></li>
+												<li><span class="toright">1 x Lily</span> <span class="toleft">$60.00</span></li>
+												<li><span class="toright">1 x Belinda</span> <span class="toleft">$60.00</span></li>
 											</ul>
 										</li>
 										<li><span>Shipping</span> <span>$0.00</span></li>
 										<li><span>Discount:</span> <span>$45.00</span></li>
-										<li><span>Order Total</span> <span>$180.00</span></li>
+										<li><span>Order Total</span> <span>$75.00</span></li>
 									</ul>
 								</div>
 						
