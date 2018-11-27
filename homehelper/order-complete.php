@@ -12,7 +12,6 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="styles/styles.css">
-	<link rel="stylesheet" href="styles/account.css">
 	<link rel="stylesheet" href="styles/shoppingCart.css">
 	<style>
 	.btn-big {
@@ -27,6 +26,18 @@
 	h3{
 	margin-bottom:20px;
 	}
+	.btn, .btn-inverse{
+	display:inline-block; 
+	padding:3px 20px; 
+	border:2px solid;
+	text-decoration:none;
+	font-weight:bold;
+    cursor: pointer;
+	border-radius: 8px;
+}
+
+.btn, .btn-inverse:hover{color:#FFFFFF; background-color:#EEC50F; border-color:#FFFFFF;}
+.btn:hover, .btn-inverse{color:#EEC50F; background-color:transparent; border-color:#EEC50F;}
 	</style>
 	</head>
 	
@@ -78,8 +89,8 @@
 						<h3>Thank you for purchasing!</h3> 
 
 						<p>
-							<a href="userInfo.php"class="btn-inverse">My Order</a>
-							<a href="index.php"class="btn-inverse"><i class="icon-shopping-cart"></i> Continue Shopping</a>
+							<a href="index.php"class="btn-inverse">My Order</a>
+							<a href="display.php"class="btn-inverse"><i class="icon-shopping-cart"></i> Continue Shopping</a>
 						</p>
 					</div>
 				</div>

@@ -48,7 +48,6 @@
 			display: flex;
 			justify-content: space-between;
 			margin-top: 30px;
-			border-bottom: 1px solid white;
 		}
 		.header_right_ul{
 			display: flex;
@@ -72,7 +71,7 @@
 			outline:0;
 			border: none;
 		}
-		b{
+		d{
 			color: #FABF14;
 			font-size: 70px;
 			font-family:Monospace;
@@ -113,7 +112,7 @@
 		
 	</style>
 	
-	<div class="header">
+	<div class="header" style="background:#f1f1f1">
 	<div class="topbar">
 		<ul class="aul">
 			<?php
@@ -132,7 +131,7 @@
 	<div class="header_body">
 		<div class="header_left" style="display: flex;">
 			
-			<b>H</b><c>ome-helper</c>
+			<d>H</d><c>ome-helper</c>
 		</div>
 		<div class="header_right">
 			<ul class="header_right_ul">
