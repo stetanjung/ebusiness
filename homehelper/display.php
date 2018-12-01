@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +63,7 @@ a{
 </style>
 <body>
 	<?php
-	require('nav.php')
+		require('nav.php')
 	?>
 	<h1 class="title">BEST&nbsp;&nbsp;&nbsp;SELLERS</h1>
 	<div class="content">

@@ -349,35 +349,35 @@ Author: Code Apes.
 		<?php
 			require('account_sidebar.php');
 			$userQuery = "select * from user where userID=$users_id"; 
-			$result = mysqli_connect($con, $userQuery);
-			$array = mysqli_fetch_array($result, MYSQQLI_ASSOC);
+			$result = mysqli_query($con, $userQuery);
+			$array = mysqli_fetch_array($result, MYSQLI_ASSOC);
 		?>
 		<div class="content" style="text-align:center;">
 		<h1>Personal Information</h1><hr>
 		<table>
 		<tr>
 		  <td><h3>Username:</h3></td>
-		  <td><?php echo('<h3 id="uname">$array["username"]</h3>');?></td><!-- Username cannot be changed-->
+		  <td><?php echo('<h3 id="uname">'.$array["username"].'</h3>');?></td><!-- Username cannot be changed-->
 		  <td></td>
 		</tr>
 		<tr>
 		  <td><h3>Contact number:</h3></td>
-		  <td><?php echo('<h3 id="phone">$array["contactNumber"]</h3>');?></td>
+		  <td><?php echo('<h3 id="phone">'.$array["contactNumber"].'</h3>');?></td>
 		  <td id="phoneEdit"><div class="btn-inverse" onclick="EditPhone()">Edit</div></td>
 		</tr>
 		<tr>
 		  <td><h3>Age:</h3></td>
-		  <td><?php echo('<h3 id="age">$array["age"]</h3>');?></td>
+		  <td><?php echo('<h3 id="age">'.$array["age"].'</h3>');?></td>
 		  <td id="ageEdit"><div class="btn-inverse" onclick="EditAge()">Edit</div></td>
 		</tr>
 		<tr>
 		  <td><h3>Email:</h3></td>
-		  <td><?php echo('<h3 id="email">$array["email"]</h3>');?></td>
+		  <td><?php echo('<h3 id="email">'.$array["email"].'</h3>');?></td>
 		  <td id="emailEdit"><div class="btn-inverse" onclick="EditEmail()">Edit</div></td>
 		</tr>		
 		<tr>
 		  <td><h3>Nationality:</h3></td>
-		  <td><?php echo('<h3 id="country">$array["country"]</h3>');?></td>
+		  <td><?php echo('<h3 id="country">'.$array["country"].'</h3>');?></td>
 		  <td id="countryEdit"><div class="btn-inverse" onclick="EditCountry()">Edit</div></td>
 		</tr>
 		</table><br>

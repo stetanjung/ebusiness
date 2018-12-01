@@ -120,7 +120,7 @@
 								   </div>
 								   								   <div class="col-md-12">
 									<div class="form-group">
-												<label for="cardNo">Address:</label>
+												<label for="cardNo">Time:</label>
 											<input type="text" id="cardNo" class="form-control" placeholder="e.g. 2018-11-27 15:00">
 									  </div>
 								   </div>

@@ -115,9 +115,18 @@
 	<div class="header" style="background:#f1f1f1">
 	<div class="topbar">
 		<ul class="aul">
-			<li class="signup"><a href="signup.php">Sign Up</a></li>
-			<li class="login"><a href="login.php">Log In</a></li>
-			<a href="shoppingCart.php"><img class="cart" src="img/icon-cart.png" alt=""></a>
+			<?php
+				if(!isset($_SESSION['users_id'])){
+					echo('<li class="signup"><a href="signup.php">Sign Up</a></li>');
+					echo('<li class="login"><a href="login.php">Log In</a></li>');
+					echo('<a href="shoppingCart.php"><img class="cart" src="img/icon-cart.png" alt=""></a>');
+				}
+				else{
+					echo('<li class="signup"><a href="userInfo.php">My Account</a></li>');
+					echo('<li class="login"><a href="logout.php">Log Out</a></li>');
+					echo('<a href="shoppingCart.php"><img class="cart" src="img/icon-cart.png" alt=""></a>');
+				}
+			?>
 		</ul>
 	</div>
 	<div class="header_body">

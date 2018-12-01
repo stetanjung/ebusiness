@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include("connection.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +12,19 @@
 </head>
 <body>
     <?php
-        echo($_POST['query']);
+        require("nav.php");
+    ?>
+    <?php
+        if(empty($_POST['query'])){
+            echo("<script>history.back()</script>");
+        }
+        else{
+            
+        }
+    ?>
+
+    <?php
+        include("connectionclose.php");
     ?>
 </body>
 </html>

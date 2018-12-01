@@ -30,7 +30,7 @@ require('nav.php');
 			<form action="changePassword_authentication.php" method="post">
 				<li>
 					<label for="">Old Password</label>
-					<input type="password" name="oldPassword" value="" style="color:#999;" minlength="8" maxlength="16"/>
+					<input type="password" name="oldPassword" value="" style="color:#999;" maxlength="16"/>
 					<span class="error error2"></span>
 				</li>
 				<li>

@@ -65,15 +65,15 @@ a{
 <body>
 	<?php
 		require('nav.php');
-		$employeeQuery = "select * from employee join serviceType on serviceType.employeeID = employee.employeeID";
+		$employeeQuery = "select * from employee join serviceType on serviceType.employeeID = employee.employeeID where serviceType.typeName='babysitter'";
 		$result = mysqli_query($con, $employeeQuery);
 	?>
-	<h1 class="title">BEST&nbsp;&nbsp;&nbsp;SELLERS</h1>
+	<h1 class="title">BABY-SITTERS</h1>
 	<div class="content">
 		<?php
 			$i = 0;
 			while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-				if($next = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+				if(mysqli_fetch_array($result, MYSQLI_ASSOC) != NULL && $i != 0){
 					if($i%4 == 0){
 						echo("<ul class='ful'>");
 						echo("<li>");
@@ -100,6 +100,15 @@ a{
 						echo("</a></li>");
 					}
 				}
+				elseif(mysqli_fetch_array($result, MYSQLI_ASSOC) == NULL && $i == 0){
+					echo("<ul class='ful'>");
+					echo("<li>");
+					echo("<a href=''>");
+					echo("<img src='' alt=''>");
+					echo("<p>$row[employeeName]</p><br><p>$row[typeName]</p>");
+					echo("<span>$$row[price]/hour</span>");
+					echo("</a></li></ul>");
+				}
 				else{
 					echo("<li>");
 					echo("<a href=''>");
@@ -112,5 +121,8 @@ a{
 			}
 		?>
 	</div>
+<?php
+	include("connectionclose.php");
+?>
 </body>
 </html>
