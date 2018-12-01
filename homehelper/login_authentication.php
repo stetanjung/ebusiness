@@ -1,6 +1,23 @@
 <?php
     include('connection.php');
+    require_once("recaptchalib.php");
     session_start();
+    $siteKey = "6LfqX3sUAAAAALV6mrSQgHpz7SGj_kvXdZChHvh-";
+    $secret = "6LfqX3sUAAAAAFIP1syCuqtNgvNrHyLTg4IBJVs3";
+
+    $lang="en";
+    $resp = null;
+    $error = null;
+
+    $reCaptcha = new ReCaptcha($secret);
+
+    if ($_POST["g-recaptcha-response"]) {
+        $resp = $reCaptcha->verifyResponse(
+            $_SERVER["REMOTE_ADDR"],
+            $_POST["g-recaptcha-response"]
+        );
+    }
+
     //required field names
     $required = array('username', 'password');
     //go through each field names, make sure each one exists and not empty;
@@ -10,7 +27,7 @@
             $error = true;
         }
     }
-    if($error){
+    if($error && $resp == true){
         echo("<script>alert('All fields are required.');window.location.href='/~16094653d/ebusiness/homehelper/login.php';</script>");
     }
     else{
