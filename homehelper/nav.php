@@ -122,7 +122,8 @@
 					echo('<a href="shoppingCart.php"><img class="cart" src="img/icon-cart.png" alt=""></a>');
 				}
 				else{
-					echo('<li class="logout"><a href="logout.php">Log Out</a></li>');
+					echo('<li class="signup"><a href="userInfo.php">My Account</a></li>');
+					echo('<li class="login"><a href="logout.php">Log Out</a></li>');
 					echo('<a href="shoppingCart.php"><img class="cart" src="img/icon-cart.png" alt=""></a>');
 				}
 			?>

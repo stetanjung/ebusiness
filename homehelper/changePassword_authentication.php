@@ -13,18 +13,18 @@
     }
 
     if($error){
-        echo("<script>alert('All fields are required.');window.location.href='/ebusiness/homehelper/signup.php';</script>");
+        echo("<script>alert('All fields are required.');window.location.href='/~16094653d/ebusiness/homehelper/signup.php';</script>");
     }
     else{
-        $oldPassword = md5(_POST['oldPassword']);
+        $oldPassword = md5($_POST['oldPassword']);
         $newPassword = md5($_POST['newPassword']);
         $updatePasswordQuery = "UPDATE user SET pass='$newPassword' where userID='$users_id' and pass='$oldPassword'";
         $updatePassword=mysqli_query($con, $updatePasswordQuery);
         if($updatePassword === TRUE){
-            echo("<script>alert('Password has been updated.');window.location.href='/ebusiness/homehelper/changePassword.php';</script>");
+            echo("<script>alert('Password has been updated.');window.location.href='/~16094653d/ebusiness/homehelper/changePassword.php';</script>");
         }
         else{
-            echo("<script>alert('Please enter your old password correctly.');window.location.href='/ebusiness/homehelper/changePassword.php';</script>");
+            echo("<script>alert('Please enter your old password correctly.');window.location.href='/~16094653d/ebusiness/homehelper/changePassword.php';</script>");
         }
     }
     include('connectionclose.php');
