@@ -1,5 +1,48 @@
 <?php
-	session_start();
+session_start();
+require_once("dbcontroller.php");
+$db_handle = new DBController();
+if(!empty($_GET["action"])) {
+switch($_GET["action"]) {
+	case "add":
+		if(!empty($_POST["quantity"])) {
+			$productByCode = $db_handle->runQuery("SELECT * FROM service_type WHERE code='" . $_GET["code"] . "'");
+			$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 
+			'quantity'=>$_POST["quantity"], 'price'=>$productPrice, 'image'=>$productByCode[0]["image"]));
+			
+			if(!empty($_SESSION["cart_item"])) {
+				if(in_array($productByCode[0]["code"],array_keys($_SESSION["cart_item"]))) {
+					foreach($_SESSION["cart_item"] as $k => $v) {
+							if($productByCode[0]["code"] == $k) {
+								if(empty($_SESSION["cart_item"][$k]["quantity"])) {
+									$_SESSION["cart_item"][$k]["quantity"] = 0;
+								}
+								$_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
+							}
+					}
+				} else {
+					$_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
+				}
+			} else {
+				$_SESSION["cart_item"] = $itemArray;
+			}
+		}
+	break;
+	case "remove":
+		if(!empty($_SESSION["cart_item"])) {
+			foreach($_SESSION["cart_item"] as $k => $v) {
+					if($_GET["code"] == $k)
+						unset($_SESSION["cart_item"][$k]);				
+					if(empty($_SESSION["cart_item"]))
+						unset($_SESSION["cart_item"]);
+			}
+		}
+	break;
+	case "empty":
+		unset($_SESSION["cart_item"]);
+	break;	
+}
+}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -74,12 +117,21 @@
 				</div>
 				<div class="row row-pb-lg">
 					<div class="col-md-12">
+					
+					<a class="btn btn-big" href="index.php?action=empty">Empty Cart</a>
+
+					<?php
+					if(isset($_SESSION["cart_item"])){
+						$total_quantity = 0;
+						$total_price = 0;
+					?>	
+					
 						<div class="product-name d-flex">
 							<div class="one-forth text-left px-4">
 								<span>Product Details</span>
 							</div>
 							<div class="one-eight text-center">
-								<span>Price</span>
+								<span>Unit Price</span>
 							</div>
 							<div class="one-eight text-center">
 								<span>Quantity</span>
@@ -91,34 +143,83 @@
 								<span>Remove</span>
 							</div>
 						</div>
+						
+						<?php
+						foreach ($_SESSION["cart_item"] as $item) {
+							$item_price = $item["quantity"]*$item["price"];
+						?>
+						
 						<div class="product-cart d-flex">
 							<div class="one-forth">
-								<div class="product-img" style="background-image: url(images/item-6.jpg);">
+								<div class="product-img" style="background-image: url(images/<?php echo $item["image"]; ?>);">
 								</div>
 								<div class="display-tc">
-									<h3>Dana Baby-sitter</h3>
+									<h3><?php echo $item["name"]; ?></h3>
 								</div>
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$60.00</span>
+									<span class="price"><?php echo "$ ".$item["price"]; ?></span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
+									<input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="<?php echo $item["quantity"]; ?>" min="1" max="100">
+									<script>
+									var quantity = document.getElementById("quantity").value;
+									<?php 
+									$item["quantity"] = quantity;
+									?>
+									</script>
 								</div>
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<span class="price">$60.00</span>
+									<span class="price"><?php echo "$ ". number_format($item_price,2); ?></span>
 								</div>
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
-									<a href="#" class="closed"></a>
+									<a href="shoppingCart.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction"><img src="img/icon-delete.png" alt="Remove Item" /></a>
 								</div>
 							</div>
+							
+							<?php
+							$total_quantity += $item["quantity"];
+							$total_price += ($item["price"] * $item["quantity"]);
+						}
+						
+						$_SESSION["cart_totalPrice"] = $total_price;
+						$_SESSION["cart_totalQuantity"] = $total_quantity;
+						?>
+						
+						<div class="product-cart d-flex">
+							<div class="one-forth">
+								<div class="product-img">
+								</div>
+								<div class="display-tc">
+									<h3></h3>
+								</div>
+							</div>
+							<div class="one-eight text-center">
+								<div class="display-tc">
+									<span class="price"></span>
+								</div>
+							</div>
+							<div class="one-eight text-center">
+								<div class="display-tc"></div>
+							</div>
+							<div class="one-eight text-center">
+								<div class="display-tc">
+									<span class="price"><?php echo "$ ".number_format($total_price, 2); ?></span>
+								</div>
+							</div>
+							<div class="one-eight text-center">
+								<div class="display-tc"></div>
+							</div>
+					
+						
+						
 						</div>
 						
 				

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,14 +80,22 @@ header{
 	<span class="span2">&nbsp;/&nbsp;&nbsp;PRODUCT DETAILS</span>
 </header>
 <div class="content">
+
+	<form method="post" action="shoppingCart.php?action=add&code=<?php echo $code; ?>">
+	
 	<div class="mian_left">
 		<img src="img/b3.jpg" alt="">
 	</div>
 	<div class="mian_right">
 		<h3>Dana</h3>
 		<span>$60.00/hour</span>
-		<p>She is responsible for her work and very patient with her children. She speaks Cantonese and English. She is your best choice.</p>
+		<p>She is responsible for her work and very patient with her children. She speaks Cantonese and English. She is your best choice.</p><br>
+		
+		<input type="text" class="product-quantity" name="quantity" value="1" size="2" />
+		<input type="submit" value="Add to Cart" class="add" />
+		<!-- 
 		<a href="shoppingCart.php"><button class="add">Add to cart</button></a>
+		-->
 	</div>
 </div>
 </body>
