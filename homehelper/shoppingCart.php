@@ -164,13 +164,16 @@ switch($_GET["action"]) {
 							</div>
 							<div class="one-eight text-center">
 								<div class="display-tc">
+									<h3><?php echo $item["quantity"]; ?></h3>
+								<!--
 									<input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="<?php echo $item["quantity"]; ?>" min="1" max="100">
 									<script>
 									var quantity = document.getElementById("quantity").value;
 									<?php 
-									$item["quantity"] = quantity;
+									#$item["quantity"] = quantity;
 									?>
 									</script>
+									-->
 								</div>
 							</div>
 							<div class="one-eight text-center">
