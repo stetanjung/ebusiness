@@ -63,70 +63,46 @@ a{
 </style>
 <body>
 	<?php
-		require('nav.php')
+		require('nav.php');
+		include('connection.php');
 	?>
 	<h1 class="title">BEST&nbsp;&nbsp;&nbsp;SELLERS</h1>
 	<div class="content">
-		<ul class="ful">
-			<li>
-				<a href="detail.php">
-					<img src="img/m1.jpg" alt="">
-					<p>Lily<br>Maid</p>
-					<span>$60.00/hour</span>
-				</a>
-			</li>
-			<li>
-				<a href="detail.php">
-					<img src="img/b2.jpg" alt="">
-					<p>Ada<br>Baby-sitter</p>
-					<span>$60.00/hour</span>
-				</a>
-			</li>
-			<li>
-				<a href="detail.php">
-					<img src="img/m2.jpg" alt="">
-					<p>Belinda<br>Maid</p>
-					<span>$60.00</span>
-				</a>
-			</li>
-			<li>
-				<a href="detail.php">
-					<img src="img/m3.png" alt="">
-					<p>Coral<br>Maid</p>
-					<span>$60.00/hour</span>
-				</a>
-			</li>
-		</ul>
-		<ul class="ful">
-			<li>
-				<a href="detail.php">
-					<img src="img/b3.jpg" alt="">
-					<p>Dana<br>Baby-sitter</p>
-					<span>$60.00/hour</span>
-				</a>
-			</li>
-			<li>
-				<a href="detail.php">
-					<img src="img/b4.jpg" alt="">
-					<p>Jolie<br>Baby-sitter</p>
-					<span>$60.00/hour</span>
-				</a>
-			</li>
-			<li>
-				<a href="detail.php">
-					<img src="img/m4.png" alt="">
-					<p>Nancy<br>Maid</p>
-					<span>$60.00/hour</span>
-				</a>
-			</li>
-			<li>
-				<a href="detail.php">
-					<img src="img/b5.jpg" alt="">
-					<p>Rita<br>Baby-sitter</p>
-					<span>$60.00/hour</span>
-				</a>
-			</li>
-		</ul>
+		<?php
+			$displayQuery = "select * from employee";
+			$display = mysqli_query($con, $displayQuery);
+			$i = 0;
+			while($row = mysqli_fetch_array($display, MYSQLI_ASSOC)){
+				if($i%4==0){
+					echo('<ul class="ful">');
+					echo('<li>');
+					echo('<a href="detail.php?id='.$row['employeeID'].'">');
+					echo('<img src="img/'.$row['images'].'" alt="">');
+					echo('<p>'.$row['employeeName'].'<br>'.$row['typeName'].'</p>');
+					echo('<span>$'.$row['price'].'00/hour</span>');
+					echo('</a></li>');
+				}
+				elseif($i%4==3){
+					echo('<li>');
+					echo('<a href="detail.php?id='.$row['employeeID'].'">');
+					echo('<img src="img/'.$row['images'].'" alt="">');
+					echo('<p>'.$row['employeeName'].'<br>'.$row['typeName'].'</p>');
+					echo('<span>$'.$row['price'].'00/hour</span>');
+					echo('</a></li></ul>');
+				}
+				else{
+					echo('<li>');
+					echo('<a href="detail.php?id='.$row['employeeID'].'">');
+					echo('<img src="img/'.$row['images'].'" alt="">');
+					echo('<p>'.$row['employeeName'].'<br>'.$row['typeName'].'</p>');
+					echo('<span>$'.$row['price'].'00/hour</span>');
+					echo('</a></li>');
+				}
+			}
+		?>
 	</div>
+	<?php
+		include('connectionclose.php');
+	?>
 </body>
 </html>

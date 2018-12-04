@@ -1,8 +1,8 @@
 <?php
-    $SERVERNAME = "mysql.comp.polyu.edu.hk";
-    $USERNAME = /** student id */"16094653d";
-    $PASSWORD = /** password */"mbnjwyhb";
-    $SCHEMA = /** default schema (student id) */"16094653d";
+    $SERVERNAME = "localhost";//"mysql.comp.polyu.edu.hk";
+    $USERNAME = "root";/** student id *///"16094653d";
+    $PASSWORD = "";/** password *///"mbnjwyhb";
+    $SCHEMA = "home-helper";/** default schema (student id) *///"16094653d";
  
     $con = new mysqli($SERVERNAME, $USERNAME, $PASSWORD, $SCHEMA);
     if(!$con){

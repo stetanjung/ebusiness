@@ -25,28 +25,24 @@
 
     $employee = "CREATE TABLE employee (
         employeeID int unsigned auto_increment primary key,
+        serviceID int unsigned,
         employeeName varchar(30) not null,
         contactNumber varchar(20) not null,
-        age int unsigned not null,
-        gender varchar(1) not null
-    )";
-
-    $serviceType = "CREATE TABLE service_type (
-        serviceID int unsigned auto_increment primary key,
-        employeeID int unsigned not null,
         typeName varchar(30) not null,
+        age int unsigned not null,
+        gender varchar(1) not null,
         price int unsigned not null,
         availableTime int unsigned not null,
         description varchar(200) not null,
-        FOREIGN KEY (employeeID) REFERENCES employee(employeeID)
+        images varchar(200)
     )";
 
     $shoppingCart = "CREATE TABLE shopping_cart (
         cartID int unsigned auto_increment primary key,
         userID int unsigned,
-        serviceID int unsigned,
+        employeeID int unsigned,
         FOREIGN KEY (userID) REFERENCES user(userID),
-        FOREIGN KEY (serviceID) REFERENCES service_type(serviceID)
+        FOREIGN KEY (employeeID) REFERENCES employee(employeeID)
     )";
 
     $payment = "CREATE TABLE payment (
@@ -63,7 +59,7 @@
 
     $createTable = array();
 
-    array_push($createTable, $user, $employee, $serviceType, $shoppingCart, $payment, $comment);
+    array_push($createTable, $user, $employee, $shoppingCart, $payment, $comment);
 
     for($i = 0; $i < count($createTable); $i++){
         if(mysqli_query($con, $createTable[$i]) === TRUE){
