@@ -12,7 +12,7 @@
     }
 
     if($error){
-        echo("<script>alert('All fields are required.');window.location.href='signup.php';</script>");
+        echo("<script>alert('All fields are required.');window.location.href='/~16094653d/ebusiness/homehelper/signup.php';</script>");
     }
     else{
         $username = $_POST['username'];
@@ -27,7 +27,7 @@
         $question2 = $_POST['q2'];
         $answer2 = $_POST['a2'];
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo("<script>alert('Invalid email format.');window.location.href='signup.php';</script>");
+            echo("<script>alert('Invalid email format.');window.location.href='/~16094653d/ebusiness/homehelper/signup.php';</script>");
         }
         $existUserQuery = "select userID from user where username = '$username'";
         $existUser = mysqli_fetch_array(mysqli_query($con, $existUserQuery), MYSQLI_ASSOC);
@@ -38,6 +38,6 @@
             echo(mysqli_error($con));
         }
         include('connectionclose.php');
-        echo("<script>alert('User is successfully created.');window.location.href=' index.php'</script>");
+        echo("<script>alert('User is successfully created.');window.location.href=' /~16094653d/ebusiness/homehelper/'</script>");
     }
 ?>

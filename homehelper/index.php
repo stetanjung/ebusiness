@@ -122,9 +122,50 @@
 </head>
 
 <body class="background">
-	<?php
-		require('nav.php');
-	?>
+	<div class="header">
+	<div class="topbar">
+		<ul class="aul">
+		<?php
+				if(!isset($_SESSION['users_id'])){
+					echo('<li class="signup"><a href="signup.php">Sign Up</a></li>');
+					echo('<li class="login"><a href="login.php">Log In</a></li>');
+				}
+				else{
+					echo('<li class="signup"><a href="userInfo.php">My Account</a></li>');
+					echo('<li class="login"><a href="logout.php">Log Out</a></li>');
+					echo('<a href="shoppingCart.php"><img class="cart" src="img/icon-cart.png" alt=""></a>');
+				}
+			?>
+		</ul>
+	</div>
+	<div class="header_body">
+		<div class="header_left" style="display: flex;">
+			
+			<b>H</b><c>ome-helper</c>
+		</div>
+		<div class="header_right">
+			<ul class="header_right_ul">
+				<li><a href="index.php">HOME</a></li>
+				<li><a href="aboutus.php">ABOUT US</a></li>
+				<li class="block">
+					<a href="display.php">SERVICE ITEMS</a>
+					<ul class="none">
+						<li><a href="maid.php">Maid</a></li>
+						<li><a href="babysitter.php">Baby-sitter</a></li>
+					</ul>
+				</li>
+				<li style="margin-left: 30px;"><a href="mailto:17083801d@connect.polyu.hk">MAIL US</a></li>
+			</ul>
+		</div>
+		<div class="inp">
+			<form action="search.php" name="search" method="post">
+			<input type="text" name="query" placeholder="Search...">
+			 
+			<img class="img" src="img/search.png" onClick="javascript:fsubmit(document.search);">
+			</form>
+		</div>
+	</div>
+</div>
 </body>
 </html>
 
