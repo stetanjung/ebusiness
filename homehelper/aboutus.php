@@ -16,13 +16,13 @@
     .text{
 	margin: 30px 0;
 	line-height:1.5;
+    font-size: 1.4rem;
+    font-family: Raleway,"Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     }
     body {
 	background-size: cover;
 	color: # 0 0 0;
 	text-align: left;
-	font-size: 1.4rem;
-	font-family: Raleway,"Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     }
     </style>
     <body>
