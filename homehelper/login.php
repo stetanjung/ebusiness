@@ -7,7 +7,7 @@
     <title>Login | HomeHelper</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<!-- reCAPTCHA -->
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
 </head>
 
 <body>

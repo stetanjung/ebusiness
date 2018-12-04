@@ -1,5 +1,6 @@
 <?php
-session_start();
+	session_start();
+	$employeeID = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -73,31 +74,31 @@ header{
 </head>
 <body>
 	<?php
-	require('nav.php')
+		require('nav.php');
+		include('connection.php');
+		$detailQuery = "select * from employee where employeeID=$employeeID";
+		$detail = mysqli_query($con, $detailQuery);
 	?>
 <header>
 	<span class="span1"><a href="index.php">HOME</a></span>
 	<span class="span2">&nbsp;/&nbsp;&nbsp;PRODUCT DETAILS</span>
 </header>
-
-<form method="post" action="shoppingCart.php?action=add&code=<?php echo $code; ?>" class="content">
-	
-	<div class="mian_left">
-		<img src="img/b3.jpg" alt="">
-	</div>
-	<div class="mian_right">
-		<h3>Dana</h3>
-		<span>$60.00/hour</span>
-		<p>She is responsible for her work and very patient with her children. She speaks Cantonese and English. She is your best choice.</p><br>
-		
-		Service Hours: <input type="number" class="product-quantity" name="quantity" value="1" min="1" max="365"/><br>
-		<input type="submit" value="Add to Cart" class="add" />
-		<!-- 
-		<a href="shoppingCart.php"><button class="add">Add to cart</button></a>
-		-->
-	</div>
-	
-</form>
-
+<?php
+	while($row = mysqli_fetch_array($detail, MYSQLI_ASSOC)){
+		echo('<form method="post" action="shoppingCart.php?action=add&code=$employeeID" class="content">');
+		echo('<div class="mian_left">');
+		echo('<img src="img/'.$row['images'].'.jpg" alt="">');
+		echo('</div><div class="mian_right">');
+		echo('<h3>'.$row['employeeName'].'</h3>');
+		echo('<span>$'.$row['price'].'00/hour</span>');
+		echo('<p>'.$row['description'].'</p><br>');
+		echo('Service Hours: <input type="number" class="product-quantity" name="quantity" value="1" min="1" max="365"/><br>');
+		echo('<input type="submit" value="Add to Cart" class="add" />');
+		echo('</div></form>');
+	}
+?>
+<?php
+	include('connectionclose.php');
+?>
 </body>
 </html>

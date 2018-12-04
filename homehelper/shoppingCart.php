@@ -6,7 +6,8 @@ if(!empty($_GET["action"])) {
 switch($_GET["action"]) {
 	case "add":
 		if(!empty($_POST["quantity"])) {
-			$productByCode = $db_handle->runQuery("SELECT * FROM service_type WHERE code='" . $_GET["code"] . "'");
+			$employeeID = $_GET['code'];
+			$productByCode = $db_handle->runQuery('SELECT * FROM employee WHERE employeeID=$employeeID');
 			$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 
 			'quantity'=>$_POST["quantity"], 'price'=>$productPrice, 'image'=>$productByCode[0]["image"]));
 			
@@ -124,6 +125,7 @@ switch($_GET["action"]) {
 					if(isset($_SESSION["cart_item"])){
 						$total_quantity = 0;
 						$total_price = 0;
+					}
 					?>	
 					
 						<div class="product-name d-flex">
@@ -238,7 +240,7 @@ switch($_GET["action"]) {
 		
 		
 		<?php
-		require('footer.php')
+		require('footer.php');
 		?>
 		
 	</div>
@@ -249,4 +251,3 @@ switch($_GET["action"]) {
 
 	</body>
 </html>
-

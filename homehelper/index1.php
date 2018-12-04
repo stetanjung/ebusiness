@@ -119,7 +119,6 @@
 		}
 		
 	</style>
-	</style>
 </head>
 
 <body class="background">
