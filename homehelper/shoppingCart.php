@@ -8,11 +8,13 @@ switch($_GET["action"]) {
 		if(!empty($_POST["quantity"])) {
 			$employeeID = $_GET['code'];
 			$productByCode = $db_handle->runQuery('SELECT * FROM employee WHERE employeeID=$employeeID');
-			$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 
-			'quantity'=>$_POST["quantity"], 'price'=>$productPrice, 'image'=>$productByCode[0]["image"]));
+			$itemArray = array($productByCode[0]["employeeID"]=>array('name'=>$productByCode[0]["employeeName"], 'code'=>$productByCode[0]["employeeID"], 
+			'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]['price'], 'image'=>$productByCode[0]["image"]));
+			$data = array($productByCode[0]['employeeID'], $_POST['quantity']);
+			
 			
 			if(!empty($_SESSION["cart_item"])) {
-				if(in_array($productByCode[0]["code"],array_keys($_SESSION["cart_item"]))) {
+				if(in_array($productByCode[0]["employeeID"],array_keys($_SESSION["cart_item"]))) {
 					foreach($_SESSION["cart_item"] as $k => $v) {
 							if($productByCode[0]["code"] == $k) {
 								if(empty($_SESSION["cart_item"][$k]["quantity"])) {
@@ -24,11 +26,15 @@ switch($_GET["action"]) {
 				} else {
 					$_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
 				}
+				array_push($_SESSION['history'], $data);
+
 			} else {
 				$_SESSION["cart_item"] = $itemArray;
+				$_SESSION['history'] = array();
+				array_push($_SESSION['history'], $data);
 			}
 		}
-	break;
+		break;
 	case "remove":
 		if(!empty($_SESSION["cart_item"])) {
 			foreach($_SESSION["cart_item"] as $k => $v) {
@@ -38,10 +44,10 @@ switch($_GET["action"]) {
 						unset($_SESSION["cart_item"]);
 			}
 		}
-	break;
+		break;
 	case "empty":
 		unset($_SESSION["cart_item"]);
-	break;	
+		break;	
 }
 }
 ?>
@@ -89,7 +95,7 @@ switch($_GET["action"]) {
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<p class="bread"><span><a href="index.html">My Account</a></span> / <span>Shopping Cart</span></p>
+						<p class="bread"><span><a href="index.php">My Account</a></span> / <span>Shopping Cart</span></p>
 					</div>
 				</div>
 			</div>
@@ -119,7 +125,7 @@ switch($_GET["action"]) {
 				<div class="row row-pb-lg">
 					<div class="col-md-12">
 					
-					<a class="btn btn-big" href="index.php?action=empty">Empty Cart</a>
+					<a class="btn btn-big" href="shoppingCart.php?action=empty">Empty Cart</a>
 
 					<?php
 					if(isset($_SESSION["cart_item"])){
