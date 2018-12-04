@@ -1,6 +1,7 @@
 <?php
-	session_start();
+session_start();
 ?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -102,13 +103,29 @@
 									<h2>Cart Total</h2>
 									<ul>
 										<li>
-											<span>Subtotal</span> <span>$120.00</span>
+											<span>Subtotal Price</span> 
+											<span>
+											<?php $subtotal_price = $_SESSION["cart_totalPrice"];
+											echo "$ ".number_format($subtotal_price, 2); ?>
+											</span>
+											
+											<span>Total Quantity</span> <span>
+											<?php $total_quantity = $_SESSION["cart_totalQuantity"];
+											echo $total_quantity; ?>
+											</span>
+											
+											<!--
 											<ul>
 												<li><span class="toright">Dana Baby-sitter * 2 hrs</span> <span class="toleft">$60.00 * 2</span></li>
 											</ul>
+											-->
 										</li>
-										<li><span>Discount:</span> <span>$0.00</span></li>
-										<li><span>Order Total</span> <span>$120.00</span></li>
+										<?php 
+										$discount = 5;
+										$total_price = $subtotal_price - $discount;
+										?>
+										<li><span>Discount:</span> <span><?php echo "$ ".number_format($discount, 2);?></span></li>
+										<li><span>Order Total</span> <span><?php echo "$ ".number_format($total_price, 2); ?></span></li>
 									</ul>
 								</div>
 								
