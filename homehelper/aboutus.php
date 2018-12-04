@@ -4,16 +4,33 @@
     <head>
     <meta charset="UTF-8">
     <title>HomeHelper</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
     </head>
+    <style>
+    *{
+	margin:0px;
+	padding:0px;
+    }
+    .content{
+	margin-top: 140px;
+    }
+    .text{
+	margin: 30px 0;
+	line-height:1.5;
+    }
+    body {
+	background-size: cover;
+	color: # 0 0 0;
+	text-align: right;
+	font-size: 1.4rem;
+	font-family: Raleway,"Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    }
+    </style>
     <body>
         <?php
 		require('nav.php');
         ?>
         <blockquote class="text">
-            <p>
+            <p class="content">
             Home-helper is a profitable service-oriented B2C company,
             which focus on providing<br>hourly domestic services,
             such as caretaking, houseworking, and venue-cleaning.<br>
@@ -21,7 +38,7 @@
             live up to the standard,<br>after being hired, our employees
             would receive futher train so that they could acquire<br> not merely
             basic requirement but advanced skills.
-            <p>
+            <p class="content">
             After further-training, our domestic workers are equipped with
             high-level knowledge<br>which enable them to utilize their adept
             technique to fulfill what you think about your<br>home enviroment.
@@ -32,7 +49,7 @@
             of everything and hence with no doubt, our<br>customers could rely their
             on the hands of the domestic workers and feel at ease with<br> our service.
 
-            <p>
+            <p class="content">
             It is quite convenient for customers to access domestic services from
             our company<br>–– All they need to do is login to our user-friendly website
             and choose which services<br>they feel interested in. After doing so, customers
