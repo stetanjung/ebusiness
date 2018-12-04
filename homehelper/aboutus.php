@@ -20,7 +20,7 @@
     body {
 	background-size: cover;
 	color: # 0 0 0;
-	text-align: right;
+	text-align: left;
 	font-size: 1.4rem;
 	font-family: Raleway,"Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     }
