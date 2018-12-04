@@ -130,7 +130,6 @@
 				if(!isset($_SESSION['users_id'])){
 					echo('<li class="signup"><a href="signup.php">Sign Up</a></li>');
 					echo('<li class="login"><a href="login.php">Log In</a></li>');
-					echo('<a href="shoppingCart.php"><img class="cart" src="img/icon-cart.png" alt=""></a>');
 				}
 				else{
 					echo('<li class="signup"><a href="userInfo.php">My Account</a></li>');
