@@ -47,7 +47,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<p class="bread"><span><a href="index.html">My Account</a></span> / <span>Order History</span></p>
+						<p class="bread"><span><a href="index.php">My Account</a></span> / <span>Order History</span></p>
 					</div>
 				</div>
 			</div>
