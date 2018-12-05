@@ -87,10 +87,10 @@ header{
 	while($row = mysqli_fetch_array($detail, MYSQLI_ASSOC)){
 		echo('<form method="post" action="shoppingCart.php?action=add&code=$employeeID" class="content">');
 		echo('<div class="mian_left">');
-		echo('<img src="./img/'.$row['images'].'.jpg" alt="">');
+		echo('<img src="./img/'.$row['images'].'" alt="">');
 		echo('</div><div class="mian_right">');
 		echo('<h3>'.$row['employeeName'].'</h3>');
-		echo('<span>$'.$row['price'].'00/hour</span>');
+		echo('<span>$'.$row['price'].'.00/hour</span>');
 		echo('<p>'.$row['description'].'</p><br>');
 		echo('Service Hours: <input type="number" class="product-quantity" name="quantity" value="1" min="1" max="365"/><br>');
 		echo('<input type="submit" value="Add to Cart" class="add" />');
