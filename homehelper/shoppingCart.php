@@ -10,7 +10,7 @@ switch($_GET["action"]) {
 			$productByCode = $db_handle->runQuery('SELECT * FROM employee WHERE employeeID=$employeeID');
 			$itemArray = array($productByCode[0]["employeeID"]=>array('name'=>$productByCode[0]["employeeName"], 'code'=>$productByCode[0]["employeeID"], 
 			'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]['price'], 'image'=>$productByCode[0]["image"]));
-			$data = array($productByCode[0]['employeeID'], $_POST['quantity']);
+			$data = array("id" => $productByCode[0]['employeeID'], "quantity" => $_POST['quantity']);
 			
 			
 			if(!empty($_SESSION["cart_item"])) {

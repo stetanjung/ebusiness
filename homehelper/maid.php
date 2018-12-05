@@ -66,17 +66,17 @@ a{
 		include('connection.php');
 	?>
 	<h1 class="title">MAIDS</h1>
-	<div class="content">
 	<?php
 			$displayQuery = "select * from employee";
 			$display = mysqli_query($con, $displayQuery);
 			$i = 0;
 			while($row = mysqli_fetch_array($display, MYSQLI_ASSOC)){
 				if($i%4==0){
+					echo('<div class="content">');
 					echo('<ul class="ful">');
 					echo('<li>');
 					echo('<a href="detail.php?id='.$row['employeeID'].'">');
-					echo('<img src="img/'.$row['images'].'" alt="">');
+					echo('<img src="./img/'.$row['images'].'" alt="">');
 					echo('<p>'.$row['employeeName'].'<br>'.$row['typeName'].'</p>');
 					echo('<span>$'.$row['price'].'00/hour</span>');
 					echo('</a></li>');
@@ -84,19 +84,20 @@ a{
 				elseif($i%4==3){
 					echo('<li>');
 					echo('<a href="detail.php?id='.$row['employeeID'].'">');
-					echo('<img src="img/'.$row['images'].'" alt="">');
+					echo('<img src="./img/'.$row['images'].'" alt="">');
 					echo('<p>'.$row['employeeName'].'<br>'.$row['typeName'].'</p>');
 					echo('<span>$'.$row['price'].'00/hour</span>');
-					echo('</a></li></ul>');
+					echo('</a></li></ul></div>');
 				}
 				else{
 					echo('<li>');
 					echo('<a href="detail.php?id='.$row['employeeID'].'">');
-					echo('<img src="img/'.$row['images'].'" alt="">');
+					echo('<img src="./img/'.$row['images'].'" alt="">');
 					echo('<p>'.$row['employeeName'].'<br>'.$row['typeName'].'</p>');
 					echo('<span>$'.$row['price'].'00/hour</span>');
 					echo('</a></li>');
 				}
+				$i++;
 			}
 		?>
 	</div>

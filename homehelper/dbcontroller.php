@@ -1,9 +1,9 @@
 <?php
 class DBController {
 	private $host = "mysql.comp.polyu.edu.hk";
-	private $user = "16098537d";
-	private $password = "iqdobdiy";
-	private $database = "16098537d";
+	private $user = "17083801d";
+	private $password = "qhmqlsqo";
+	private $database = "17083801d";
 	private $conn;
 	
 	function __construct() {

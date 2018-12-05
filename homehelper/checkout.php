@@ -131,74 +131,47 @@ session_start();
 								
 								<div class="cart-detail">
 									<h2>Your Information</h2>
-									<form>
+									<form method="post" class="cart-detail" action="checkoutProcess.php"><form>
 								   <div class="col-md-12">
 										<div class="form-group">
 												<label for="cardNo">Address:</label>
-											<input type="text" id="cardNo" class="form-control" placeholder="Your Address..">
+											<input type="text" id="cardNo" class="form-control" name="address" placeholder="Your Address..">
 									  </div>
 								   </div>
 								   								   <div class="col-md-12">
 									<div class="form-group">
 												<label for="cardNo">Time:</label>
-											<input type="text" id="cardNo" class="form-control" placeholder="e.g. 2018-11-27 15:00">
+											<input type="text" id="cardNo" class="form-control" name="time" placeholder="e.g. 2018-11-27 15:00">
 									  </div>
 								   </div>
-								   <div class="col-md-12">
-										<div class="form-group">
-												<label for="cardHolder">Further Requirement:</label>
-											<input type="text" id="cardHolder" class="form-control" placeholder="Remarks..">
-									  </div>
-								   </div></form>
 								</div>
 						
 
 						   <div class="w-100"></div>
 
-								<form method="post" class="cart-detail" action="order-complete.php">
-									<h2>Payment Method</h2>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio"> Credit Card Payment</label>
-											</div>
-										</div>
-									</div>
-									
+								<div class="card-detail">
+									<h2>Payment Method</h2>									
 								   <div class="col-md-12">
 										<div class="form-group">
 												<label for="cardNo">Credit Card Number:</label>
-											<input type="text" id="cardNo" class="form-control" placeholder="">
+											<input type="text" id="cardNo" name="ccNo" class="form-control" placeholder="">
 									  </div>
 								   </div>
 								   
 								   <div class="col-md-12">
 										<div class="form-group">
 												<label for="cardHolder">Card Holder Name:</label>
-											<input type="text" id="cardHolder" class="form-control" placeholder="">
+											<input type="text" id="cardHolder" name="ccName" class="form-control" placeholder="">
 									  </div>
 								   </div>
 									
 									<div class="form-group">
 										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio"> Check Payment</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
-											<div class="radio">
-											   <label><input type="radio" name="optradio"> Paypal</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-md-12">
 											<div class="checkbox">
-											   <label><input type="checkbox" value=""> <b>I have read and accept the terms and conditions.</b></label>
+											   <label><input type="checkbox" value="" required> <b>I have read and accept the terms and conditions.</b></label>
 											</div>
 										</div>
+									</div>
 									</div>
 							
 					<div class="col-md-12 text-center">

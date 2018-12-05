@@ -116,7 +116,7 @@
 	<div class="topbar">
 		<ul class="aul">
 			<?php
-				if(!isset($_SESSION['users_id'])){
+				if(!isset($_SESSION['userID'])){
 					echo('<li class="signup"><a href="signup.php">Sign Up</a></li>');
 					echo('<li class="login"><a href="login.php">Log In</a></li>');
 				}

@@ -87,7 +87,7 @@ header{
 	while($row = mysqli_fetch_array($detail, MYSQLI_ASSOC)){
 		echo('<form method="post" action="shoppingCart.php?action=add&code=$employeeID" class="content">');
 		echo('<div class="mian_left">');
-		echo('<img src="img/'.$row['images'].'.jpg" alt="">');
+		echo('<img src="./img/'.$row['images'].'.jpg" alt="">');
 		echo('</div><div class="mian_right">');
 		echo('<h3>'.$row['employeeName'].'</h3>');
 		echo('<span>$'.$row['price'].'00/hour</span>');

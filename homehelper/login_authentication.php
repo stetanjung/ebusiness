@@ -1,6 +1,6 @@
 <?php
     include('connection.php');
-    require_once("recaptchalib.php");
+    require("recaptchlib.php");
     session_start();
     $siteKey = "6LfqX3sUAAAAALV6mrSQgHpz7SGj_kvXdZChHvh-";
     $secret = "6LfqX3sUAAAAAFIP1syCuqtNgvNrHyLTg4IBJVs3";
@@ -40,10 +40,10 @@
         else{
             $array=mysqli_fetch_array($result,MYSQLI_ASSOC);
             if($array['userID'] == '1'){
-                $_SESSION['users_id']=$array['userID'];
+                $_SESSION['userID']=$array['userID'];
                 echo("<script>window.location.href='admin.html'</script>");            
             }
-            $_SESSION['users_id']=$array['userID'];
+            $_SESSION['userID']=$array['userID'];
         }
     }
     include('connectionclose.php');

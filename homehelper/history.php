@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	$userID = $_SESSION['userID'];
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -35,7 +39,8 @@
 
 	<div id="page">
 		<?php
-		require('nav.php')
+			require('nav.php');
+			include('connection.php');
 		?>
 
 		<div class="breadcrumbs">
@@ -73,34 +78,23 @@
 							</div>
 						</div>
 						
-						<div class="product-cart d-flex">
-							<div class="one-eight">
-								<div class="display-tc">
-									<h3>order time</h3>
-								</div>
-							</div>
-							<div class="one-forth">
-								<div class="display-tc">
-									<h3>service details</h3>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<span class="price">$10.00</span>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<h3>1</h3>
-								</div>
-							</div>
-							<div class="one-eight text-center">
-								<div class="display-tc">
-									<span class="price">$60.00</span>
-								</div>
-							</div>
-						
-						</div>
+						<?php
+							$query = "select * from shopping_cart inner join employee on shopping_cart.employeeID = employee.employeeID inner join user on shopping_cart.userID=user.userID inner join payment on shopping_cart.paymentID=payment.paymentID where user.userID=$userID";
+							$queryResult = mysqli_query($con, $query);
+							while($row = mysqli_fetch_array($queryResult, MYSQLI_ASSOC)){
+								$total = $row['employee.price']*$row['shopping_cart.quantity'];
+								echo('<div class="product-cart d-flex"><div class="one-eight">');
+								echo('<div class="display-tc"><h3>'.$row['paymentID.time'].'</h3></div></div>');
+								echo('<div class="one-forth">');
+								echo('<div class="display-tc"><h3>'.$row['employee.employeeName'].'</h3></div></div>');
+								echo('<div class="one-eight text-center">');
+								echo('<div class="display-tc"><span class="price">$'.$row['employee.price'].'.00</span></div></div>');
+								echo('<div class="one-eight text-center">');
+								echo('<div class="display-tc"><h3>'.$row['shopping_cart.quantity'].'</h3></div></div>');
+								echo('<div class="one-eight text-center">');
+								echo('<div class="display-tc"><span class="price">$'.$total.'.00</span></div></div></div>');
+							}
+						?>
 					</div>
 				</div>
 			</div>

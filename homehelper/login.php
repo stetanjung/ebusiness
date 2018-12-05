@@ -7,7 +7,7 @@
     <title>Login | HomeHelper</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<!-- reCAPTCHA -->
-	<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -31,6 +31,7 @@
 					<input type="password" name="password" value="" style="color:#999;"/>
 					<span class="error error2"></span>
 				</li>
+				<a href="forgetPassword.php" style="color:blue;margin-left:170px;"><u>Forget Password?</u></a>
 				<li>
 					<!-- CAPTCHA -->
 					<div id="captcha">

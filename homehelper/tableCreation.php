@@ -16,13 +16,6 @@
         country varchar(30) not null
     )";
 
-    $comment = "CREATE TABLE comment (
-        commentID int unsigned auto_increment primary key,
-        paymentID int unsigned not null,
-        content varchar(200) not null,
-        FOREIGN KEY (paymentID) REFERENCES payment(paymentID)
-    )";
-
     $employee = "CREATE TABLE employee (
         employeeID int unsigned auto_increment primary key,
         serviceID int unsigned,
@@ -37,29 +30,30 @@
         images varchar(200)
     )";
 
-    $shoppingCart = "CREATE TABLE shopping_cart (
-        cartID int unsigned auto_increment primary key,
-        userID int unsigned,
-        employeeID int unsigned,
-        FOREIGN KEY (userID) REFERENCES user(userID),
-        FOREIGN KEY (employeeID) REFERENCES employee(employeeID)
-    )";
-
     $payment = "CREATE TABLE payment (
         paymentID int unsigned auto_increment primary key,
-        cartID int unsigned not null,
         userID int unsigned not null,
         creditCard varchar(16) not null,
         address varchar(200) not null,
         time varchar(20) not null,
         totalPrice int unsigned not null,
-        FOREIGN KEY (cartID) REFERENCES shopping_cart(cartID),
         FOREIGN KEY (userID) REFERENCES user(userID)
+    )";
+
+    $shoppingCart = "CREATE TABLE shopping_cart (
+        cartID int unsigned auto_increment primary key,
+        userID int unsigned,
+        employeeID int unsigned,
+        paymentID int unsigned,
+        quantity int unsigned,
+        FOREIGN KEY (userID) REFERENCES user (userID),
+        FOREIGN KEY (employeeID) REFERENCES employee (employeeID),
+        FOREIGN KEY (paymentID) REFERENCES payment (paymentID)
     )";
 
     $createTable = array();
 
-    array_push($createTable, $user, $employee, $shoppingCart, $payment, $comment);
+    array_push($createTable, $user, $payment, $employee, $shoppingCart);
 
     for($i = 0; $i < count($createTable); $i++){
         if(mysqli_query($con, $createTable[$i]) === TRUE){
