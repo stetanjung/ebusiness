@@ -87,7 +87,7 @@ a{
 					echo('<a href="detail.php?id='.$row['employeeID'].'">');
 					echo('<img src="./img/'.$row['images'].'" alt="">');
 					echo('<p>'.$row['employeeName'].'<br>'.$row['typeName'].'</p>');
-					echo('<span>$'.$row['price'].'00/hour</span>');
+					echo('<span>$'.$row['price'].'.00/hour</span>');
 					echo('</a></li></ul></div>');
 				}
 				else{

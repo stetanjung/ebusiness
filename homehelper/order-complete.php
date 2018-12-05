@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -47,7 +50,7 @@
 
 	<div id="page">
 		<?php
-		require('nav.php')
+			require('nav.php');
 		?>
 
 		<div class="breadcrumbs">
@@ -89,7 +92,7 @@
 						<h3>Thank you for purchasing!</h3> 
 
 						<p>
-							<a href="index.php"class="btn-inverse">My Order</a>
+							<a href="history.php"class="btn-inverse">My Order</a>
 							<a href="display.php"class="btn-inverse"><i class="icon-shopping-cart"></i> Continue Shopping</a>
 						</p>
 					</div>

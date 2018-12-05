@@ -68,7 +68,7 @@ a{
 	<h1 class="title">BABY-SITTERS</h1>
 	
 	<?php
-			$displayQuery = "select * from employee where typeName='babysitter'";
+			$displayQuery = "select * from employee where typeName='baby-sitter'";
 			$display = mysqli_query($con, $displayQuery);
 			$i = 0;
 			while($row = mysqli_fetch_array($display, MYSQLI_ASSOC)){
